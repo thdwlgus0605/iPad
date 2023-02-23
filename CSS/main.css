@@ -19,7 +19,6 @@ html.fixed {
   width: 100%;
 }
 body {
-  height: 10000px;
   font-size: 16px;
   line-height: 1;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
@@ -165,14 +164,13 @@ a.link::after {
   transform: translate(0, 0);
   opacity: 1;
 }
-.infos--large.info {
+.infos--large .info {
   max-width: 410px;
 }
 .info .icon {
   width: 100px;
   height: 100px;
   margin: 0 0 -15px -30px;
-  background-image: url('../images/sprite_apps.png');
   animation: sprite-icon 3s steps(1) infinite;
 }
 
@@ -204,6 +202,9 @@ a.link::after {
   display: block;
   margin-top: 44px;
   font-size: 19.5px;
+}
+.info a:hover {
+  text-decoration: underline;
 }
 
 /* WHITEBOX */
@@ -243,11 +244,13 @@ header {
   position: relative;
   /* position값이 없으면 z-index적용 안됨 */
   z-index: 9;
+  transition: .4s;
 }
 header .inner {
   max-width: 1020px;
   /* 좌우 너비를 자동으로 계산하여 가운데 정렬이 될 수 있도록 */
   /* margin: 0 auto; */
+  height: var(--header-height);
 }
 header ul.menu {
   height: var(--header-height);
@@ -259,6 +262,7 @@ header ul.menu {
 header ul.menu > li {
   display: flex;
   position: relative;
+  cursor: pointer;
   /* li태그가 순차적으로 주르륵 사라짐 */
   transition: .4s;
 }
@@ -278,16 +282,16 @@ header ul.menu > li.basket-starter > a{
   background-repeat: no-repeat;
   background-position: center 13px;
 }
-header ul.menu > li.apple-logo > a{
+header ul.menu > li.apple-logo > a {
   background-image: url("../images/header_apple.svg");
 }
-header ul.menu > li.search-starter > a{
+header ul.menu > li.search-starter > a {
   background-image: url("../images/header_search.svg");
 }
-header ul.menu > li.basket-starter > a{
+header ul.menu > li.basket-starter > a {
   background-image: url("../images/header_bag.svg");
 }
-header ul.menu > li > a:hover {
+header ul.menu > li:hover > a {
   opacity: 1;
 }
 
@@ -362,7 +366,7 @@ header .search-wrap{
   width: 100%;
   /* 요소는 보이지 않지만, 애니메이션 처리는 가능한 상태 */
   visibility: hidden;
-  opacity: none;
+  opacity: 0;
   transition: .4s;
 }
 header .search {
@@ -436,7 +440,7 @@ header .search .autocompletes h3 {
 header .search .autocompletes ul li a {
   display: block;
   margin: 0 -14px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 30px;
   font-size: 14px;
   cursor: pointer;
 }
