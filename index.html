@@ -49,6 +49,16 @@
     <div class="inner">
 
       <ul class="menu">
+
+        <li class="menu-starter">
+          <a>
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </li>
+
         <li class="apple-logo"><a href="javascript:void(0)">Apple</a></li>
         <li><a href="javascript:void(0)">스토어</a></li>
         <li><a href="javascript:void(0)">Mac</a></li>
@@ -88,6 +98,10 @@
             <div class="search-icon"></div>
             <div class="search-closer"></div>
           </div> 
+
+          <!-- 모바일 모드에서만 -->
+          <div class="search-canceler">취소</div>
+
           <div class="autocompletes">
             <h3>빠른 링크</h3>
             <ul>
@@ -102,6 +116,21 @@
         </div>
       </div>
 
+      <!-- 모바일 모드에서만 display -->
+      <div class="clone-menu">
+        <ul>
+          <li><a href="javascript:void(0)">스토어</a></li>
+          <li><a href="javascript:void(0)">Mac</a></li>
+          <li><a href="javascript:void(0)">iPad</a></li>
+          <li><a href="javascript:void(0)">iPhone</a></li>
+          <li><a href="javascript:void(0)">Watch</a></li>
+          <li><a href="javascript:void(0)">AirPods</a></li>
+          <li><a href="javascript:void(0)">Apple 독점 제공</a></li>
+          <li><a href="javascript:void(0)">액세서리</a></li>
+          <li><a href="javascript:void(0)">고객지원</a></li>
+          </ul>
+      </div>
+
     </div>
 
 
@@ -109,9 +138,19 @@
 
   <!-- NAVIGATION -->
   <nav>
+
+    <!-- 모바일 모드에서만 출력 -->
+    <div class="shadow"></div>
+    <!-- 모바일 모드에서만 출력 -->
+    <div class="contents-bg"></div>
+
     <div class="inner">
 
       <h1>iPad</h1>
+
+      <!-- 모바일 모드에서만 출력 -->
+      <div class="menu-toggler"></div>
+
       <ul class="menu">
         <li class="active"><a href="javascript:void(0)">개요</a></li>
         <li><a href="javascript:void(0)">iPad를 선택하는 이유</a></li>
@@ -345,8 +384,10 @@
       <div class="facetime">
         <h1 class="bgtext">선이 없다는 건 한계가 없다는 것.</h1>
         <div class="figures">
-          <img src="./images/wireless_facetime.jpg" alt="19명이 참여 중인 FaceTime 영상통화" />
-          <figcaption class="bgtext">FACETIME으로 소통하고</figcaption>
+          <figure>
+            <img src="./images/wireless_facetime.jpg" alt="19명이 참여 중인 FaceTime 영상통화" />
+           <figcaption class="bgtext">FACETIME으로 소통하고</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -762,7 +803,7 @@
 
       <div class="legal">
         <div class="copyright">
-          Copyright ⓒ<span class="this-year"></span> Apple Inc. 모든 권리 보유.
+          Copyright ⓒ <span class="this-year"></span> Apple Inc. 모든 권리 보유.
         </div>
 
         <ul>
